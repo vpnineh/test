@@ -19,7 +19,7 @@ jobs:
 
     - name: Run script to create new configs
       run: |
-          python IPTest/iptest.py
+          python iptest.py
           
     - name: Check for new changes
       id: changes
@@ -30,7 +30,7 @@ jobs:
       run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add IPTest/output
+          git add output
           timestamp=$(TZ='Asia/Tehran' date)
           git commit -m "✅Updated on ${timestamp}"
           git push
@@ -38,7 +38,7 @@ jobs:
     - name: Convert output to base64
       run: |
           content=$(cat IPTest/output | base64 | tr -d '\n')
-            echo "$content" > IPTest/output64
+            echo "$content" > output64
             
     - name: Check for output Base64 Changes
       id: changesS
