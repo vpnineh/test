@@ -19,7 +19,7 @@ jobs:
 
     - name: Run script to create new configs
       run: |
-          python test/iptest.py
+          python iptest.py
           
     - name: Check for new changes
       id: changes
