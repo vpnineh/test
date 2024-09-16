@@ -37,7 +37,7 @@ jobs:
 
     - name: Convert output to base64
       run: |
-          content=$(cat IPTest/output | base64 | tr -d '\n')
+          content=$(cat output | base64 | tr -d '\n')
             echo "$content" > output64
             
     - name: Check for output Base64 Changes
@@ -49,7 +49,7 @@ jobs:
       run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add IPTest/output64
+          git add output64
           timestamp=$(TZ='Asia/Tehran' date)
           git commit -m "✅Updated on ${timestamp}"
           git push
