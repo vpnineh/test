@@ -31,8 +31,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add cdn
-          timestamp=$(TZ='Asia/Tehran' date)
-          git commit -m "Updated on ${timestamp}"
           git push
 
     - name: Convert output to base64
@@ -50,6 +48,4 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add cdn64
-          timestamp=$(TZ='Asia/Tehran' date)
-          git commit -m "Updated on ${timestamp}"
           git push
