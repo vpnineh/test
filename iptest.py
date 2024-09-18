@@ -46,7 +46,7 @@ def rename_vless_address(proxy, new_address):
 def process_proxies(input_file, ips_file, output_file):
     # Read the single proxy configuration
     with open(input_file, 'r') as f:
-        proxy = f.readline().strip()
+        proxy = [line.strip() for line in f.readlines()]
 
     # Read the list of IP addresses
     with open(ips_file, 'r') as ip_f:
