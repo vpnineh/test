@@ -64,7 +64,7 @@ def process_proxies(input_file, ips_file, output_file):
                 out_f.write(renamed_proxy + '\n')
 
 # Example usage
-input_file = 'config.txt'
+input_file = 'config.txt' , 'config2.txt'
 ips_file = 'ips.txt'
 output_file = 'output'
 
