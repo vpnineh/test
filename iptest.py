@@ -6,7 +6,7 @@ proxy_counter = 0
 
 def rename_vmess_address(proxy, new_address):
     global proxy_counter
-    base64_str = proxy.split('://')[1]
+    base64_str = proxy.split('://')[2]
     missing_padding = len(base64_str) % 4
     if missing_padding:
         base64_str += '=' * (4 - missing_padding)
