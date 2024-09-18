@@ -30,14 +30,14 @@ jobs:
       run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add output
+          git add cdn
           timestamp=$(TZ='Asia/Tehran' date)
           git commit -m "✅Updated on ${timestamp}"
           git push
 
     - name: Convert output to base64
       run: |
-          content=$(cat output | base64 | tr -d '\n')
+          content=$(cat cdn | base64 | tr -d '\n')
             echo "$content" > cdn64
             
     - name: Check for output Base64 Changes
@@ -49,7 +49,7 @@ jobs:
       run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add output64
+          git add cdn64
           timestamp=$(TZ='Asia/Tehran' date)
           git commit -m "✅Updated on ${timestamp}"
           git push
