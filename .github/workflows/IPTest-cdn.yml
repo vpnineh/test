@@ -33,7 +33,7 @@ jobs:
           git add cdn
           timestamp=$(TZ='Asia/Tehran' date)
           git commit -m "✅ Updated on ${timestamp}"
-          git push
+          
 
     - name: Convert output to base64
       run: |
@@ -52,4 +52,4 @@ jobs:
           git add cdn64
           timestamp=$(TZ='Asia/Tehran' date)
           git commit -m "✅ Updated on ${timestamp}"
-          git push
+          
