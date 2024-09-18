@@ -29,7 +29,7 @@ jobs:
       if: steps.changes.outputs.changed == 'true'   
       run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.name "GitHub Actions"
           git add cdn
           timestamp=$(TZ='Asia/Tehran' date)
           git commit -m "✅ Updated on ${timestamp}"
