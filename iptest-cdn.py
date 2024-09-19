@@ -16,7 +16,7 @@ def rename_vmess_address(proxy, new_address):
         proxy_json = json.loads(decoded_str)
         proxy_json['add'] = new_address
         proxy_json['ps'] = new_address + ' - ' + '@VPNineh'  # Set remarks to new address
-        proxy_counter += 1
+        proxy_counter += 2
         encoded_str = base64.b64encode(json.dumps(proxy_json).encode('utf-8')).decode('utf-8')
         renamed_proxy = 'vmess://' + encoded_str
         print("Renamed VMess proxy:", renamed_proxy)  # Debugging
