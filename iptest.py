@@ -1,31 +1,5 @@
 import base64
 import json
-import ip.txt
-
-import urllib.request 
-urllib.request.urlretrieve("https://raw.githubusercontent.com/Surfboardv2ray/Subs/refs/heads/main/IPTest/ips.txt", "ip.txt")
-
-
-# Open the source text files
-file1 = open('ip.txt', 'r')
-
-
-# Read the contents of the text files
-content1 = file1.read()
-
-
-# Close the source text files
-file1.close()
-
-
-# Open the destination file
-destination_file = open('ips.txt', 'w')
-
-# Write the concatenated content to the destination file
-destination_file.write(content1)
-# Close the destination file
-destination_file.close()
-
 
 # Global variable to keep track of processed proxies
 proxy_counter = 0
