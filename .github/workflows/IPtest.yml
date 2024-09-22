@@ -21,9 +21,10 @@ jobs:
 
     - name: Run script to create new configs
       run: |
+          python dl.py
           python iptest.py
           python iptest-cdn.py
-          python dl.py
+
           
     - name: Check for new changes
       id: changes
