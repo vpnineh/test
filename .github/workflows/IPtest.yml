@@ -3,11 +3,12 @@ on:
   push:
     push:
     paths:
-      - '.github/workflows/iptest.yml'
+      - '.github/workflows/IPtest.yml'
 
   workflow_dispatch:
   schedule:
     - cron: "0 */2 * * *"
+    
 jobs:
   build:
     runs-on: ubuntu-latest
