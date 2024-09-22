@@ -1,15 +1,9 @@
 name: IPTest
 on:
   push:
-    push:
-    paths:
-      - '.github/workflows/IPtest.yml'
-      - 'iptest.py'
-      
+    branches: [ main ]
   workflow_dispatch:
-  schedule:
-    - cron: "0 */1 * * *"
-    
+  
 jobs:
   build:
     runs-on: ubuntu-latest
