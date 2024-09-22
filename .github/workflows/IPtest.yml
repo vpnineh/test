@@ -4,7 +4,8 @@ on:
     push:
     paths:
       - '.github/workflows/IPtest.yml'
-
+      - 'iptest.py'
+      
   workflow_dispatch:
   schedule:
     - cron: "0 */1 * * *"
