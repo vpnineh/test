@@ -3,13 +3,13 @@ name: IPTest
 on:
   push:
     paths:
-      - 'config.txt'
-      - 'config2.txt'
-      - '.github/workflows/IPtest.yml'
+     # - 'config.txt'
+   #   - 'config2.txt'
+    #  - '.github/workflows/IPtest.yml'
 
   workflow_dispatch:
   schedule:
-    - cron: "0 */2 * * *"
+ #   - cron: "0 */2 * * *"
     
 jobs:
   build:
