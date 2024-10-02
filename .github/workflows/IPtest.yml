@@ -28,8 +28,6 @@ jobs:
     - name: Run script to create new configs
       run: |
           python iptest.py
-          python iptest-cdn.py
-
           
     - name: Check for new changes
       id: changes
